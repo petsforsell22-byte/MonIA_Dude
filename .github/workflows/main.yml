@@ -3,15 +3,15 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: kivy/buildozer:latest
     steps:
       - uses: actions/checkout@v3
       - name: Build with Buildozer
-        uses: kivy/buildozer-action@master
-        with:
-          command: buildozer android debug
+        run: |
+          buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: package
           path: bin/*.apk
-
