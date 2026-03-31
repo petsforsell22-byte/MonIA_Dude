@@ -2,11 +2,10 @@ name: Build DUDE APK
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Build with Buildozer
-        uses: Niklas-S/buildozer-action@v1
+        uses: GearS3/buildozer-action@v1
         with:
           command: buildozer android debug
-
