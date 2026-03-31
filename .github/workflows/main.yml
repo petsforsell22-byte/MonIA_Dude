@@ -9,4 +9,3 @@ jobs:
         uses: EnisHaxhiaj/buildozer-action@v1
         with:
           command: buildozer android debug
-
