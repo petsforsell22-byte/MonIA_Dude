@@ -1,10 +1,10 @@
 from kivy.app import App
-from kivy.uix.label import Label
+from kivy.uix.button import Button
 
 class DudeApp(App):
     def build(self):
-        return Label(text="DUDE IA : SYSTÈME DÉCHAÎNÉ ET OPÉRATIONNEL")
+        return Button(text="DUDE IA ACTIVE")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     DudeApp().run()
 
