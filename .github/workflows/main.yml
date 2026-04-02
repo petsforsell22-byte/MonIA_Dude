@@ -1,15 +1,8 @@
-  %11name: Build DUDE APK
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    container:
-      image: kivy/buildozer:latest
     steps:
       - uses: actions/checkout@v4
       - name: Build with Buildozer
         run: |
-         YES |  buildozer --verbose android debug --build-dir .buildozer
+          yes | buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
